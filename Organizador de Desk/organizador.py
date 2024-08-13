@@ -15,9 +15,10 @@ locais = {
     "video":[".mp4",".wmv",".avi",".mov",],
     "atalho": [".lnk"],
     "programas":[".exe"],
+    "compactados" :[".zip",".rar"],
+    "Torrent" : [".torrent"]
     
-    
-} 
+}   
 
 for arquivo in lista_arquivos: 
     nome, extensao = os.path.splitext(f"{caminho}/{arquivo}")
@@ -26,7 +27,9 @@ for arquivo in lista_arquivos:
             if not os.path.exists(f"{caminho}/{pasta}"):
                 os.mkdir(f"{caminho}/{pasta}")
             os.rename(f"{caminho}/{arquivo}", f"{caminho}/{pasta}/{arquivo}")
-            tkinter.messagebox.showinfo(title=None, message="concluído", options= None)
+    
+
+tkinter.messagebox.showinfo(title=None, message="concluído", options= None)
            
             
 
